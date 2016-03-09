@@ -15,4 +15,4 @@ rm -rif wordpress
 rm -rif latest.zip
 ````
 
-http://conpanna.netls 
+http://conpanna.net
