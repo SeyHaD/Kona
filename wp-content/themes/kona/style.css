@@ -60,3 +60,16 @@ body{
     text-decoration: none;
     text-shadow: none;
 }
+#sidebar-menu .current-menu-item{
+    text-decoration: underline;
+}
+
+#sidebar-menu .menu-footer-menu-container{
+    bottom: 0;
+    left: 0;
+    padding: 40px 20px;
+    position: fixed;
+}
+#sidebar-menu .menu-footer-menu-container a{
+    font-size: 12px;
+}

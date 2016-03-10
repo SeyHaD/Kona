@@ -15,6 +15,13 @@
                 'menu_class'     => 'primary-menu',
 			    ) );  
             ?>
+            
+            <?php
+                wp_nav_menu( array(
+                'theme_location' => 'footer',
+                'menu_class'     => 'footer-menu',
+			    ) );
+            ?>
         </div>
         <div id="page">
             
@@ -22,9 +29,12 @@
                 <?php while ( have_posts() ) : the_post(); ?>
             
                 <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                
+                <?php the_content(); ?>
             
                 <?php endwhile; ?>
             <?php endif; ?>
+            
             
         </div>
         
