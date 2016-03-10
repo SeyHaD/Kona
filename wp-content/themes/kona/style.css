@@ -28,6 +28,31 @@ body{
     padding: 10px;
 }
 
+/*
+    Forms
+*/
+form textarea,
+form select,
+form input{
+    border: 1px solid #c2c6c9;
+}
+form input[type="submit"]{
+    background: #323e48;
+    border: 1px solid #5b6770;
+    color: #c2c6c9;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 32px;
+}
+
+/*
+    User authentication
+*/
+
+/*
+    Sidebar menu
+*/
+
 #sidebar-menu{
     background: #1d252c;
     height: 100%;
@@ -73,3 +98,26 @@ body{
 #sidebar-menu .menu-footer-menu-container a{
     font-size: 12px;
 }
+
+/*
+    Comments
+*/
+#comments{
+    color: #ccc;
+}
+
+.logged-in-as{
+    font-size: 12px;
+}
+.logged-in-as a{
+    background: none;
+    text-decoration: underline
+}
+
+.comment-form{
+    font-size: 18px;
+}
+.comment-form label{
+    display: block;
+}
+
