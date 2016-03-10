@@ -15,10 +15,48 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @import url("css/tufte.css");
 
-html,body{
+html{
     margin: 0;
 }
 
 a{
     color: #333;
+}
+
+body{
+    margin: 0 0 0 320px;
+    padding: 10px;
+}
+
+#sidebar-menu{
+    background: #1d252c;
+    height: 100%;
+    left: 0;
+    padding: 40px 20px;
+    position: fixed;
+    top: 0;
+    width: 240px;
+}
+
+#sidebar-menu .homepage-link{
+    border-bottom: 2px solid rbga(255,255,255,0.6);
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#sidebar-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#sidebar-menu ul li{
+    margin: 0;   
+}
+#sidebar-menu a{
+    background: none;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: none;
 }

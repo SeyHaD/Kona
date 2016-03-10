@@ -5,7 +5,10 @@
         <?php wp_head(); ?>
     </head>
     <body>
-        <div id="top">
+        <div id="sidebar-menu">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="homepage-link">
+                    <?php bloginfo( 'name' ); ?>
+                </a>
             <?php
               wp_nav_menu( array(
                 'theme_location' => 'primary',
@@ -13,13 +16,6 @@
 			    ) );  
             ?>
         </div>
-        <header>
-            <p>
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <?php bloginfo( 'name' ); ?>
-                </a>
-            </p>   
-        </header>
         <div id="page">
             
             <?php if ( have_posts() ) : ?>
