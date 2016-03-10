@@ -31,6 +31,12 @@
                 <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
                 
                 <?php the_content(); ?>
+                
+                <?php
+                if ( comments_open() || get_comments_number() ) {
+				    comments_template();
+			    }
+			    ?>
             
                 <?php endwhile; ?>
             <?php endif; ?>
