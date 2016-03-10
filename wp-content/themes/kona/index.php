@@ -5,6 +5,14 @@
         <?php wp_head(); ?>
     </head>
     <body>
+        <div id="top">
+            <?php
+              wp_nav_menu( array(
+                'theme_location' => 'primary',
+                'menu_class'     => 'primary-menu',
+			    ) );  
+            ?>
+        </div>
         <header>
             <p>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
