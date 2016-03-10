@@ -15,4 +15,7 @@ rm -rif wordpress
 rm -rif latest.zip
 ````
 
+### Style
+This theme uses (Tufte CSS)[https://github.com/edwardtufte/tufte-css].
+
 http://conpanna.net
