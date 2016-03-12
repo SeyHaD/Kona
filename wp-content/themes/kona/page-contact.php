@@ -5,6 +5,11 @@
 ?>
 
 <?php
+
+    require(realpath('.').'/vendor'.'/autoload.php');
+    require(realpath('.').'/vendor'.'/sendgrid/sendgrid/lib/SendGrid.php');
+
+
     function debug($text){
         echo '<pre>';
         printf($text);
@@ -21,6 +26,21 @@
         // validate the variables
         
         // send the email
+        $Sendgrid = new SendGrid('YOUR_SENDGRID_APIKEY');
+        $Email = new SendGrid\Email();
+        $Email
+            ->addTo('your@email.com')
+            ->setFrom($email)
+            ->setSubject('New message from your website')
+            ->setText($message)
+            ->setHtml('<strong>New Message!</strong><p>'.$message.'</p>');
+        
+        $res = $Sendgrid->send($Email);
+        var_dump($res);
+        
+        // refresh the page
+        header('Location: '.$_SERVER['REQUEST_URI']);
+        // stop the script
         exit();
         
     }
