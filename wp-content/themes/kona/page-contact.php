@@ -3,6 +3,29 @@
     Template Name: Contact Page
 */
 ?>
+
+<?php
+    function debug($text){
+        echo '<pre>';
+        printf($text);
+        echo '</pre>';
+    }
+
+    if (isset($_POST['contactForm'])){
+        
+        // set the variables
+        $name = $_POST['contactForm']['name'];
+        $email = $_POST['contactForm']['email'];
+        $message = $_POST['contactForm']['message'];
+        
+        // validate the variables
+        
+        // send the email
+        exit();
+        
+    }
+?>
+
 <html>
     <html <?php language_attributes(); ?> class="no-js">
         <title>Kona</title>
@@ -37,24 +60,25 @@
                 
                 <?php the_content(); ?>
                 
-                <form>
+                
+                <form action="<?php the_permalink() ?>" method="post">
                     <fieldset>
                         <div class="control-group">
                             <label for="name">Name</label>
                             <div class="control">
-                                <input type="text" id="name" name="name" />
+                                <input type="text" id="name" name="contactForm[name]" />
                             </div>
                         </div>
                         <div class="control-group">
                             <label for="email">Email</label>
                             <div class="control">
-                                <input type="email" id="email" name="email" />
+                                <input type="email" id="email" name="contactForm[email]" />
                             </div>
                         </div>
                         <div class="control-group">
                             <label for="message">Message</label>
                             <div class="control">
-                                <textarea id="message" name="message"></textarea>
+                                <textarea id="message" name="contactForm[message]"></textarea>
                             </div>
                         </div>
                     </fieldset>
