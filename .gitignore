@@ -4,3 +4,5 @@
 *.log
 
 wp-config.php
+wp-conteht/uploads
+wp-conteht/plugins
