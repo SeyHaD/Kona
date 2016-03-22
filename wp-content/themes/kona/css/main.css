@@ -2363,13 +2363,15 @@
 
 /* Image */
 
+	.box > p > img,
 	.image {
 		border-radius: 6px;
 		border: 0;
 		display: inline-block;
 		position: relative;
 	}
-
+		
+		.box > p > img,
 		.image img {
 			border-radius: 6px;
 			display: block;
