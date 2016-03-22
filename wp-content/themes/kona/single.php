@@ -26,6 +26,38 @@
                             
                         </div>
                         
+                        <?php 
+                            // get more posts
+                            $category_ID = get_the_category()[0]->ID;
+                            $post_ID = get_the_ID();
+                            
+                            $args = array(
+                                'posts_per_page'   => 4,
+                                'category' => $category_ID,
+                                'orderby' => 'date',
+                                'order' => 'DESC',
+                                'exclude' => $post_ID,
+                            );                       
+                            
+                            $category_posts = get_posts( $args );
+                        ?>
+                        
+                        <div class="row">
+                            <?php foreach ( $category_posts as $post ): setup_postdata( $post ); ?>
+                                <div class="6u 12u(narrower)">
+                                    <section class="box special">
+        								<a href="<?php the_permalink(); ?>" class="image featured">
+        								    <?php the_post_thumbnail(); ?>
+        								</a>
+        								<h3><?php the_title(); ?></h3>
+        								<p><?php the_excerpt(); ?></p>
+        								<ul class="actions">
+        									<li><a href="<?php the_permalink(); ?>" class="button alt">Read More</a></li>
+        								</ul>
+        							</section>
+                                </div>
+                            <?php endforeach; wp_reset_postdata(); ?>
+                        </div>
                         
                         
                         <?php

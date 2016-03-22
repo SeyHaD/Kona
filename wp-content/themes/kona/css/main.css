@@ -2264,6 +2264,12 @@
 		.box.special {
 			text-align: center;
 		}
+		
+		@media screen and (min-width: 960px) {
+			.box.special{
+				height: 840px;
+			}
+		}
 
 		.box .image.featured {
 			border-radius: 0;
@@ -2276,6 +2282,7 @@
 			.box .image.featured img {
 				border-radius: 0;
 				display: block;
+				height: auto;
 				width: 100%;
 			}
 
